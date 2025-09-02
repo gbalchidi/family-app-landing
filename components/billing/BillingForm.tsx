@@ -386,14 +386,14 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
           whileTap={{ scale: 0.98 }}
           type="submit"
           disabled={!isFormValid() || isProcessing}
-          className="w-full bg-gradient-to-r from-primary to-secondary text-text font-semibold py-4 rounded-2xl flex items-center justify-center gap-2 hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-gradient-to-r from-primary to-secondary text-white font-semibold py-4 rounded-2xl flex items-center justify-center gap-2 hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isProcessing ? (
             <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
           ) : (
             <>
-              <Shield className="w-5 h-5" />
-              Начать 14-дневный пробный период
+              <Shield className="w-5 h-5 flex-shrink-0" />
+              <span className="text-sm sm:text-base">Начать 14-дневный пробный период</span>
             </>
           )}
         </motion.button>
