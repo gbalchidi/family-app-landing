@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80 pt-20">
+    <section className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-primary via-primary/90 to-primary/80 pt-20 pb-0">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-float"></div>
@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
 
-      <div className="container-custom relative z-10 px-8 sm:px-8 lg:px-12">
+      <div className="container-custom relative z-10 px-4 sm:px-8 lg:px-12 pb-0">
         <div className="text-center max-w-5xl mx-auto">
           {/* Badge */}
           <motion.div
@@ -65,14 +65,15 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-16"
+            className="mb-8 sm:mb-16"
           >
             <button 
               onClick={handleCTAClick} 
-              className="bg-accent hover:bg-accent/90 text-text text-base sm:text-lg px-8 sm:px-12 py-3 sm:py-4 rounded-full font-semibold group inline-flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl animate-glow"
+              className="bg-accent hover:bg-accent/90 text-text text-base sm:text-lg px-6 sm:px-12 py-4 sm:py-4 rounded-full font-semibold group inline-flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl animate-glow whitespace-nowrap"
             >
-              Попробовать бесплатно 14 дней
-              <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              <span className="block sm:inline">Попробовать бесплатно</span>
+              <span className="block sm:inline sm:ml-1">14 дней</span>
+              <ArrowRight className="ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </button>
           </motion.div>
 
@@ -81,18 +82,18 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="relative w-full max-w-4xl mx-auto px-2 sm:px-4 md:px-8"
+            className="relative w-full max-w-5xl mx-auto -mb-20 sm:-mb-32 md:-mb-40 lg:-mb-48"
           >
             <div className="relative">
               {/* SVG Illustration - Optimized for mobile */}
-              <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+              <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
                 <Image 
                   src="/hero-illustration.svg" 
                   alt="Family Emotions - помощь в общении с подростком"
                   fill
-                  className="object-contain"
+                  className="object-contain object-bottom"
                   priority
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 60vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 80vw"
                   quality={100}
                 />
               </div>
