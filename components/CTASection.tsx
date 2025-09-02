@@ -66,15 +66,15 @@ const CTASection: React.FC = () => {
             className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-12 max-w-4xl mx-auto"
           >
             <div className="flex items-center gap-3 text-text/80">
-              <Heart className="w-6 h-6 text-primary" />
+              <Heart className="w-6 h-6 text-primary flex-shrink-0" />
               <span>3 минуты до первого совета</span>
             </div>
             <div className="flex items-center gap-3 text-text/80">
-              <Shield className="w-6 h-6 text-success" />
+              <Shield className="w-6 h-6 text-success flex-shrink-0" />
               <span>Без риска, 100% конфиденциально</span>
             </div>
             <div className="flex items-center gap-3 text-text/80">
-              <Users className="w-6 h-6 text-accent" />
+              <Users className="w-6 h-6 text-accent flex-shrink-0" />
               <span>Для всей семьи</span>
             </div>
           </motion.div>
@@ -87,8 +87,8 @@ const CTASection: React.FC = () => {
             viewport={{ once: true }}
             className="flex justify-center items-center mb-16 px-4"
           >
-            <button onClick={handleCTAClick} className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold text-base sm:text-lg px-8 sm:px-12 py-3 sm:py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg group inline-flex items-center justify-center">
-              Начать улучшать отношения за 299₽
+            <button onClick={handleCTAClick} className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg group inline-flex items-center justify-center whitespace-normal text-center">
+              <span>Начать улучшать отношения за 299₽</span>
               <ArrowRight className="ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </button>
           </motion.div>
