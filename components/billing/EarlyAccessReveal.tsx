@@ -62,7 +62,7 @@ export default function EarlyAccessReveal({ userData, selectedPlan }: EarlyAcces
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-surface/50 backdrop-blur-xl rounded-3xl border border-white/10 p-8 sm:p-12 shadow-2xl text-center"
+        className="bg-white rounded-3xl border border-gray-200 p-8 sm:p-12 shadow-2xl text-center"
       >
         <motion.div
           initial={{ scale: 0 }}
@@ -78,13 +78,13 @@ export default function EarlyAccessReveal({ userData, selectedPlan }: EarlyAcces
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-bold text-text mb-4">
             Добро пожаловать в команду!
           </h2>
-          <p className="text-white/80 mb-6">
+          <p className="text-text/80 mb-6">
             Приглашение в Telegram-канал отправлено на <span className="text-primary font-medium">{userData.email}</span>
           </p>
-          <p className="text-white/60 text-sm">
+          <p className="text-text/60 text-sm">
             Ожидайте уведомление о запуске через 2 недели
           </p>
         </motion.div>
@@ -107,16 +107,16 @@ export default function EarlyAccessReveal({ userData, selectedPlan }: EarlyAcces
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-surface/50 backdrop-blur-xl rounded-3xl border border-white/10 p-8 sm:p-12 shadow-2xl text-center"
+        className="bg-white rounded-3xl border border-gray-200 p-8 sm:p-12 shadow-2xl text-center"
       >
-        <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
-          <X className="w-8 h-8 text-white/60" />
+        <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <X className="w-8 h-8 text-text/60" />
         </div>
 
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-text mb-4">
           Понимаем ваше решение
         </h2>
-        <p className="text-white/80 mb-6">
+        <p className="text-text/80 mb-6">
           Возвращаем вас на главную страницу...
         </p>
       </motion.div>
@@ -127,7 +127,7 @@ export default function EarlyAccessReveal({ userData, selectedPlan }: EarlyAcces
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="bg-surface/50 backdrop-blur-xl rounded-3xl border border-white/10 p-8 sm:p-12 shadow-2xl"
+      className="bg-white rounded-3xl border border-gray-200 p-8 sm:p-12 shadow-2xl"
     >
       {/* Celebration Header */}
       <motion.div
@@ -142,7 +142,7 @@ export default function EarlyAccessReveal({ userData, selectedPlan }: EarlyAcces
         >
           🎉
         </motion.div>
-        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">
+        <h1 className="text-3xl sm:text-4xl font-bold text-text mb-2">
           Поздравляем!
         </h1>
         <p className="text-xl text-primary font-medium">
@@ -157,23 +157,23 @@ export default function EarlyAccessReveal({ userData, selectedPlan }: EarlyAcces
         transition={{ delay: 0.3 }}
         className="text-center mb-8"
       >
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-text mb-4">
           Спасибо за интерес к Family Emotions!
         </h2>
         
         <div className="bg-green-500/10 border border-green-500/30 rounded-2xl p-6 mb-6">
           <div className="flex items-center justify-center gap-3 mb-4">
             <CheckCircle className="w-6 h-6 text-green-400" />
-            <p className="text-white font-medium text-lg">
+            <p className="text-text font-medium text-lg">
               Хорошая новость: мы НЕ списали деньги с вашей карты
             </p>
           </div>
-          <p className="text-white/80 text-center">
+          <p className="text-text/80 text-center">
             Мы запускаемся через 2 недели и тестируем готовность к оплате.
           </p>
         </div>
 
-        <p className="text-white/80 mb-8">
+        <p className="text-text/80 mb-8">
           За вашу готовность поддержать проект:
         </p>
       </motion.div>
@@ -212,12 +212,12 @@ export default function EarlyAccessReveal({ userData, selectedPlan }: EarlyAcces
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.8 + index * 0.1 }}
-            className="flex items-center gap-4 bg-white/5 p-4 rounded-2xl"
+            className="flex items-center gap-4 bg-gray-50 p-4 rounded-2xl"
           >
             <div className={`${benefit.color}`}>
               {benefit.icon}
             </div>
-            <span className="text-white/90 font-medium">
+            <span className="text-text/90 font-medium">
               {benefit.title}
             </span>
           </motion.div>
@@ -233,11 +233,11 @@ export default function EarlyAccessReveal({ userData, selectedPlan }: EarlyAcces
       >
         <div className="flex items-center justify-center gap-3 mb-2">
           <Calendar className="w-6 h-6 text-primary" />
-          <p className="text-white font-semibold text-lg">
+          <p className="text-text font-semibold text-lg">
             Запуск Family Emotions: через 2 недели
           </p>
         </div>
-        <p className="text-white/70 text-sm">
+        <p className="text-text/70 text-sm">
           А пока присоединяйтесь к нашему Telegram-каналу с советами для родителей
         </p>
       </motion.div>
@@ -268,7 +268,7 @@ export default function EarlyAccessReveal({ userData, selectedPlan }: EarlyAcces
 
         <button
           onClick={handleDecline}
-          className="w-full text-white/60 hover:text-white/80 py-3 text-center transition-colors"
+          className="w-full text-text/60 hover:text-text/80 py-3 text-center transition-colors"
         >
           Не интересно? Отказаться
         </button>
@@ -281,9 +281,9 @@ export default function EarlyAccessReveal({ userData, selectedPlan }: EarlyAcces
         transition={{ delay: 1.6 }}
         className="mt-8 text-center"
       >
-        <div className="flex items-center justify-center gap-2 text-white/40 text-sm">
+        <div className="flex items-center justify-center gap-2 text-text/40 text-sm">
           <Users className="w-4 h-4" />
-          <span>Уже 2,847 российских семей в ожидании запуска</span>
+          <span>Уже 5,000+ российских семей в ожидании запуска</span>
         </div>
       </motion.div>
     </motion.div>

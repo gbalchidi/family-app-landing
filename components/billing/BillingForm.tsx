@@ -229,7 +229,7 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
       case 'mir':
         return <div className="text-xs font-bold text-green-600 bg-white px-2 py-1 rounded">МИР</div>
       default:
-        return <CreditCard className="w-5 h-5 text-white/40" />
+        return <CreditCard className="w-5 h-5 text-text/40" />
     }
   }
 
@@ -237,22 +237,22 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-surface/50 backdrop-blur-xl rounded-3xl border border-white/10 p-6 sm:p-8 shadow-2xl"
+      className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 shadow-2xl"
     >
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
         <button 
           onClick={onBack}
-          className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
+          className="flex items-center gap-2 text-text/60 hover:text-text transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Назад
         </button>
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-white">Способ оплаты</h2>
+          <h2 className="text-2xl font-bold text-text">Способ оплаты</h2>
           <div className="flex items-center justify-center gap-2 mt-1">
             <Lock className="w-4 h-4 text-green-400" />
-            <p className="text-white/60 text-sm">Защищенное соединение</p>
+            <p className="text-text/60 text-sm">Защищенное соединение</p>
           </div>
         </div>
         <div className="w-16" />
@@ -262,11 +262,11 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
       <div className="bg-white/5 border border-white/10 rounded-2xl p-4 mb-8">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-white font-medium">{getPlanDescription(selectedPlan)}</p>
-            <p className="text-white/60 text-sm">{userData.email}</p>
+            <p className="text-text font-medium">{getPlanDescription(selectedPlan)}</p>
+            <p className="text-text/60 text-sm">{userData.email}</p>
           </div>
           <div className="text-right">
-            <p className="text-2xl font-bold text-white">{getPlanPrice(selectedPlan)}</p>
+            <p className="text-2xl font-bold text-text">{getPlanPrice(selectedPlan)}</p>
             <p className="text-green-400 text-xs">14 дней бесплатно</p>
           </div>
         </div>
@@ -276,7 +276,7 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Card Number */}
         <div>
-          <label className="block text-white/80 font-medium mb-3">
+          <label className="block text-text/80 font-medium mb-3">
             Номер карты
           </label>
           <div className="relative">
@@ -285,7 +285,7 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
               value={cardData.number}
               onChange={(e) => handleCardNumberChange(e.target.value)}
               placeholder="4242 4242 4242 4242"
-              className="w-full pl-4 pr-16 py-4 bg-white/5 border border-white/20 rounded-2xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-mono"
+              className="w-full pl-4 pr-16 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-text placeholder-text/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-mono"
               maxLength={19}
             />
             <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
@@ -293,16 +293,16 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
             </div>
           </div>
           <div className="flex items-center gap-2 mt-3">
-            <div className="w-8 h-5 bg-gradient-to-r from-blue-600 to-blue-700 rounded text-white text-xs flex items-center justify-center font-bold">VISA</div>
-            <div className="w-8 h-5 bg-gradient-to-r from-red-600 to-orange-600 rounded text-white text-xs flex items-center justify-center font-bold">MC</div>
-            <div className="w-8 h-5 bg-gradient-to-r from-green-600 to-green-700 rounded text-white text-xs flex items-center justify-center font-bold">МИР</div>
+            <div className="w-8 h-5 bg-gradient-to-r from-blue-600 to-blue-700 rounded text-text text-xs flex items-center justify-center font-bold">VISA</div>
+            <div className="w-8 h-5 bg-gradient-to-r from-red-600 to-orange-600 rounded text-text text-xs flex items-center justify-center font-bold">MC</div>
+            <div className="w-8 h-5 bg-gradient-to-r from-green-600 to-green-700 rounded text-text text-xs flex items-center justify-center font-bold">МИР</div>
           </div>
         </div>
 
         {/* Expiry and CVV */}
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-white/80 font-medium mb-3">
+            <label className="block text-text/80 font-medium mb-3">
               ММ/ГГ
             </label>
             <input
@@ -310,12 +310,12 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
               value={cardData.expiry}
               onChange={(e) => handleExpiryChange(e.target.value)}
               placeholder="12/25"
-              className="w-full px-4 py-4 bg-white/5 border border-white/20 rounded-2xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-mono"
+              className="w-full px-4 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-text placeholder-text/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-mono"
               maxLength={5}
             />
           </div>
           <div>
-            <label className="block text-white/80 font-medium mb-3">
+            <label className="block text-text/80 font-medium mb-3">
               CVV
             </label>
             <div className="relative">
@@ -324,13 +324,13 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
                 value={cardData.cvv}
                 onChange={(e) => handleCvvChange(e.target.value)}
                 placeholder="123"
-                className="w-full pl-4 pr-12 py-4 bg-white/5 border border-white/20 rounded-2xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-mono"
+                className="w-full pl-4 pr-12 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-text placeholder-text/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all font-mono"
                 maxLength={4}
               />
               <button
                 type="button"
                 onClick={() => setShowCvv(!showCvv)}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/40 hover:text-white/60"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-text/40 hover:text-text/60"
               >
                 {showCvv ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
@@ -340,7 +340,7 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
 
         {/* Cardholder Name */}
         <div>
-          <label className="block text-white/80 font-medium mb-3">
+          <label className="block text-text/80 font-medium mb-3">
             Имя на карте
           </label>
           <input
@@ -348,7 +348,7 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
             value={cardData.name}
             onChange={(e) => handleNameChange(e.target.value)}
             placeholder="ALEXANDER PETROV"
-            className="w-full px-4 py-4 bg-white/5 border border-white/20 rounded-2xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all uppercase"
+            className="w-full px-4 py-4 bg-gray-50 border border-gray-300 rounded-2xl text-text placeholder-text/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all uppercase"
           />
         </div>
 
@@ -373,7 +373,7 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
               </div>
             </div>
             <div className="text-sm">
-              <span className="text-white/80">
+              <span className="text-text/80">
                 Сохранить карту для будущих платежей
               </span>
             </div>
@@ -386,7 +386,7 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
           whileTap={{ scale: 0.98 }}
           type="submit"
           disabled={!isFormValid() || isProcessing}
-          className="w-full bg-gradient-to-r from-primary to-secondary text-white font-semibold py-4 rounded-2xl flex items-center justify-center gap-2 hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-gradient-to-r from-primary to-secondary text-text font-semibold py-4 rounded-2xl flex items-center justify-center gap-2 hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isProcessing ? (
             <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -400,14 +400,14 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
 
         {/* Disclaimer */}
         <div className="text-center">
-          <p className="text-white/60 text-xs">
+          <p className="text-text/60 text-xs">
             Автоматическое продление после 14 дней. Отменить можно в любой момент.
           </p>
         </div>
       </form>
 
       {/* Security Indicators */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6 text-white/40 text-xs">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6 text-text/40 text-xs">
         <div className="flex items-center justify-center gap-2">
           <div className="w-2 h-2 bg-green-400 rounded-full flex-shrink-0" />
           <span>SSL шифрование</span>

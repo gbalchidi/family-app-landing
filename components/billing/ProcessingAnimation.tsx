@@ -54,7 +54,7 @@ export default function ProcessingAnimation() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="bg-surface/50 backdrop-blur-xl rounded-3xl border border-white/10 p-8 sm:p-12 shadow-2xl"
+      className="bg-white rounded-3xl border border-gray-200 p-8 sm:p-12 shadow-2xl"
     >
       <div className="text-center">
         {/* Main Animation */}
@@ -70,7 +70,7 @@ export default function ProcessingAnimation() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-2xl sm:text-3xl font-bold text-white mb-4"
+            className="text-2xl sm:text-3xl font-bold text-text mb-4"
           >
             Обработка платежа
           </motion.h2>
@@ -79,7 +79,7 @@ export default function ProcessingAnimation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-white/60"
+            className="text-text/60"
           >
             Пожалуйста, не закрывайте страницу
           </motion.p>
@@ -101,10 +101,10 @@ export default function ProcessingAnimation() {
               {/* Step Icon/Check */}
               <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
                 completedSteps.has(index)
-                  ? 'bg-green-500 text-white'
+                  ? 'bg-green-500 text-text'
                   : index === currentStepIndex
                     ? 'bg-primary/20 text-primary animate-pulse'
-                    : 'bg-white/10 text-white/40'
+                    : 'bg-gray-100 text-text/40'
               }`}>
                 <AnimatePresence mode="wait">
                   {completedSteps.has(index) ? (
@@ -134,8 +134,8 @@ export default function ProcessingAnimation() {
                 completedSteps.has(index)
                   ? 'text-green-400 font-medium'
                   : index === currentStepIndex
-                    ? 'text-white font-medium'
-                    : 'text-white/60'
+                    ? 'text-text font-medium'
+                    : 'text-text/60'
               }`}>
                 {step.label}
                 {completedSteps.has(index) && (
@@ -176,9 +176,9 @@ export default function ProcessingAnimation() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="mt-8 p-4 bg-white/5 rounded-2xl border border-white/10"
+          className="mt-8 p-4 bg-gray-50 rounded-2xl border border-gray-200"
         >
-          <div className="flex items-center justify-center gap-2 text-white/60 text-sm">
+          <div className="flex items-center justify-center gap-2 text-text/60 text-sm">
             <Shield className="w-4 h-4 text-green-400" />
             Ваши данные надежно защищены SSL-шифрованием
           </div>

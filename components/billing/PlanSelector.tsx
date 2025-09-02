@@ -68,22 +68,22 @@ export default function PlanSelector({ selectedPlan, onPlanSelect, onBack }: Pla
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-surface/50 backdrop-blur-xl rounded-3xl border border-white/10 p-6 sm:p-8 shadow-2xl"
+      className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 shadow-2xl"
     >
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center justify-start mb-4">
           <button 
             onClick={onBack}
-            className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-text/60 hover:text-text transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Назад
           </button>
         </div>
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-white">Выберите план</h2>
-          <p className="text-white/60 text-sm mt-1">Начните с 7-дневного пробного периода</p>
+          <h2 className="text-2xl font-bold text-text">Выберите план</h2>
+          <p className="text-text/60 text-sm mt-1">Начните с 14-дневного пробного периода</p>
         </div>
       </div>
 
@@ -97,7 +97,7 @@ export default function PlanSelector({ selectedPlan, onPlanSelect, onBack }: Pla
             className={`relative p-6 rounded-2xl border-2 cursor-pointer transition-all ${
               selectedPlan === plan.id
                 ? 'border-primary bg-primary/5'
-                : 'border-white/10 hover:border-white/20 bg-white/5'
+                : 'border-gray-200 hover:border-primary/30 bg-gray-50'
             } ${plan.popular ? 'ring-2 ring-primary/30' : ''}`}
             onClick={() => onPlanSelect(plan.id)}
           >
@@ -117,24 +117,24 @@ export default function PlanSelector({ selectedPlan, onPlanSelect, onBack }: Pla
                   <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
                     selectedPlan === plan.id 
                       ? 'border-primary bg-primary' 
-                      : 'border-white/30'
+                      : 'border-gray-400'
                   }`}>
                     {selectedPlan === plan.id && (
                       <div className="w-2 h-2 bg-white rounded-full" />
                     )}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white text-lg">{plan.name}</h3>
-                    <p className="text-white/60 text-sm">{plan.description}</p>
+                    <h3 className="font-semibold text-text text-lg">{plan.name}</h3>
+                    <p className="text-text/60 text-sm">{plan.description}</p>
                   </div>
                 </div>
 
                 <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-3xl font-bold text-white">{plan.price}</span>
-                  <span className="text-white/60">{plan.period}</span>
+                  <span className="text-3xl font-bold text-text">{plan.price}</span>
+                  <span className="text-text/60">{plan.period}</span>
                   {plan.originalPrice && (
                     <>
-                      <span className="text-white/40 line-through text-sm">{plan.originalPrice}</span>
+                      <span className="text-text/40 line-through text-sm">{plan.originalPrice}</span>
                       <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full">
                         {plan.discount}
                       </span>
@@ -146,7 +146,7 @@ export default function PlanSelector({ selectedPlan, onPlanSelect, onBack }: Pla
                   {plan.features.map((feature, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span className="text-white/80 text-sm">{feature}</span>
+                      <span className="text-text/80 text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -168,7 +168,7 @@ export default function PlanSelector({ selectedPlan, onPlanSelect, onBack }: Pla
       </motion.button>
 
       {/* Trust Indicators */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6 text-white/40 text-xs">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6 text-text/40 text-xs">
         <div className="flex items-center justify-center gap-2">
           <div className="w-2 h-2 bg-green-400 rounded-full flex-shrink-0" />
           <span>Защищено SSL</span>

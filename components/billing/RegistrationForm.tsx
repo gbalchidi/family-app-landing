@@ -87,22 +87,22 @@ export default function RegistrationForm({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-surface/50 backdrop-blur-xl rounded-3xl border border-white/10 p-6 sm:p-8 shadow-2xl"
+      className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 shadow-2xl"
     >
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center justify-start mb-4">
           <button 
             onClick={onBack}
-            className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-text/60 hover:text-text transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Назад
           </button>
         </div>
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-white">Создайте аккаунт</h2>
-          <p className="text-white/60 text-sm mt-1">Последний шаг перед началом</p>
+          <h2 className="text-2xl font-bold text-text">Создайте аккаунт</h2>
+          <p className="text-text/60 text-sm mt-1">Последний шаг перед началом</p>
         </div>
       </div>
 
@@ -113,7 +113,7 @@ export default function RegistrationForm({
             <Shield className="w-5 h-5 text-primary" />
           </div>
           <div>
-            <p className="text-white font-medium">Выбранный план:</p>
+            <p className="text-text font-medium">Выбранный план:</p>
             <p className="text-primary text-sm">{getPlanDisplayName(selectedPlan)}</p>
           </div>
         </div>
@@ -123,20 +123,20 @@ export default function RegistrationForm({
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Name Field */}
         <div>
-          <label className="block text-white/80 font-medium mb-3">
+          <label className="block text-text/80 font-medium mb-3">
             Имя
           </label>
           <div className="relative">
             <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
-              <User className="w-5 h-5 text-white/40" />
+              <User className="w-5 h-5 text-text/40" />
             </div>
             <input
               type="text"
               value={formData.name}
               onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
               placeholder="Александр"
-              className={`w-full pl-12 pr-4 py-4 bg-white/5 border rounded-2xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
-                errors.name ? 'border-red-500' : 'border-white/20 focus:border-primary/50'
+              className={`w-full pl-12 pr-4 py-4 bg-gray-50 border rounded-2xl text-text placeholder-text/50 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
+                errors.name ? 'border-red-500' : 'border-gray-300 focus:border-primary/50'
               }`}
             />
           </div>
@@ -147,20 +147,20 @@ export default function RegistrationForm({
 
         {/* Email Field */}
         <div>
-          <label className="block text-white/80 font-medium mb-3">
+          <label className="block text-text/80 font-medium mb-3">
             Email
           </label>
           <div className="relative">
             <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
-              <Mail className="w-5 h-5 text-white/40" />
+              <Mail className="w-5 h-5 text-text/40" />
             </div>
             <input
               type="email"
               value={formData.email}
               onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
               placeholder="alex@example.com"
-              className={`w-full pl-12 pr-4 py-4 bg-white/5 border rounded-2xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
-                errors.email ? 'border-red-500' : 'border-white/20 focus:border-primary/50'
+              className={`w-full pl-12 pr-4 py-4 bg-gray-50 border rounded-2xl text-text placeholder-text/50 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
+                errors.email ? 'border-red-500' : 'border-gray-300 focus:border-primary/50'
               }`}
             />
           </div>
@@ -184,7 +184,7 @@ export default function RegistrationForm({
                   ? 'bg-primary border-primary' 
                   : errors.terms 
                     ? 'border-red-500' 
-                    : 'border-white/30 hover:border-white/50'
+                    : 'border-gray-300 hover:border-gray-400'
               }`}>
                 {formData.agreeToTerms && (
                   <div className="w-2 h-2 bg-white rounded-sm" />
@@ -192,7 +192,7 @@ export default function RegistrationForm({
               </div>
             </div>
             <div className="text-sm">
-              <span className="text-white/80">
+              <span className="text-text/80">
                 Согласен с{' '}
                 <a href="/terms" target="_blank" className="text-primary hover:text-primary/80 underline">
                   условиями использования
@@ -229,7 +229,7 @@ export default function RegistrationForm({
       </form>
 
       {/* Trust Indicators */}
-      <div className="flex items-center justify-center gap-4 mt-6 text-white/40 text-xs">
+      <div className="flex items-center justify-center gap-4 mt-6 text-text/40 text-xs">
         <div className="flex items-center gap-1">
           <div className="w-2 h-2 bg-green-400 rounded-full" />
           Данные защищены
