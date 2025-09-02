@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, Heart, MessageCircle, Users } from 'lucide-react'
 import { trackEngagement } from '@/lib/analytics'
+import Image from 'next/image'
 
 const HeroSection: React.FC = () => {
   const handleCTAClick = () => {
@@ -80,15 +81,21 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="relative max-w-5xl mx-auto px-4 sm:px-8"
+            className="relative w-full max-w-4xl mx-auto px-2 sm:px-4 md:px-8"
           >
             <div className="relative">
-              {/* SVG Illustration */}
-              <img 
-                src="/hero-illustration.svg" 
-                alt="Family Emotions - помощь в общении с подростком"
-                className="w-full h-auto max-w-3xl mx-auto"
-              />
+              {/* SVG Illustration - Optimized for mobile */}
+              <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+                <Image 
+                  src="/hero-illustration.svg" 
+                  alt="Family Emotions - помощь в общении с подростком"
+                  fill
+                  className="object-contain"
+                  priority
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 60vw"
+                  quality={100}
+                />
+              </div>
               
               {/* Floating Cards with Examples */}
               <motion.div
