@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-primary via-primary/90 to-primary/80 pt-20 pb-0">
+    <section className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-primary via-primary/90 to-primary/80 pt-20 pb-0 overflow-x-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-float"></div>
@@ -71,8 +71,7 @@ const HeroSection: React.FC = () => {
               onClick={handleCTAClick} 
               className="bg-accent hover:bg-accent/90 text-text text-base sm:text-lg px-6 sm:px-12 py-4 sm:py-4 rounded-full font-semibold group inline-flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl animate-glow whitespace-nowrap"
             >
-              <span className="block sm:inline">Попробовать бесплатно</span>
-              <span className="block sm:inline sm:ml-1">14 дней</span>
+              Попробовать бесплатно 14 дней
               <ArrowRight className="ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </button>
           </motion.div>
@@ -82,11 +81,11 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="relative w-full max-w-5xl mx-auto -mb-20 sm:-mb-32 md:-mb-40 lg:-mb-48"
+            className="relative w-full max-w-5xl mx-auto mb-0"
           >
             <div className="relative">
               {/* SVG Illustration - Optimized for mobile */}
-              <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
+              <div className="relative w-full h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px]">
                 <Image 
                   src="/hero-illustration.svg" 
                   alt="Family Emotions - помощь в общении с подростком"
