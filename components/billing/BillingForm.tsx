@@ -240,34 +240,35 @@ export default function BillingForm({ userData, selectedPlan, onComplete, onBack
       className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 shadow-2xl"
     >
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
-        <button 
-          onClick={onBack}
-          className="flex items-center gap-2 text-text/60 hover:text-text transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Назад
-        </button>
+      <div className="mb-8">
+        <div className="flex items-center justify-start mb-4">
+          <button 
+            onClick={onBack}
+            className="flex items-center gap-2 text-text/60 hover:text-text transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4 flex-shrink-0" />
+            <span>Назад</span>
+          </button>
+        </div>
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-text">Способ оплаты</h2>
-          <div className="flex items-center justify-center gap-2 mt-1">
-            <Lock className="w-4 h-4 text-green-400" />
-            <p className="text-text/60 text-sm">Защищенное соединение</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-text">Способ оплаты</h2>
+          <div className="flex items-center justify-center gap-2 mt-2">
+            <Lock className="w-4 h-4 text-green-400 flex-shrink-0" />
+            <p className="text-text/60 text-sm whitespace-nowrap">Защищенное соединение</p>
           </div>
         </div>
-        <div className="w-16" />
       </div>
 
       {/* Order Summary */}
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-4 mb-8">
-        <div className="flex items-center justify-between">
-          <div>
+      <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 mb-8">
+        <div className="flex items-start justify-between gap-2">
+          <div className="min-w-0 flex-1">
             <p className="text-text font-medium">{getPlanDescription(selectedPlan)}</p>
-            <p className="text-text/60 text-sm">{userData.email}</p>
+            <p className="text-text/60 text-sm truncate">{userData.email}</p>
           </div>
-          <div className="text-right">
-            <p className="text-2xl font-bold text-text">{getPlanPrice(selectedPlan)}</p>
-            <p className="text-green-400 text-xs">14 дней бесплатно</p>
+          <div className="text-right flex-shrink-0">
+            <p className="text-xl sm:text-2xl font-bold text-text">{getPlanPrice(selectedPlan)}</p>
+            <p className="text-green-500 text-xs whitespace-nowrap">14 дней бесплатно</p>
           </div>
         </div>
       </div>
